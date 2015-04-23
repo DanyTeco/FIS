@@ -23,6 +23,39 @@
 
 	<div class="title"><?php echo $client['nume'].' '.$client['prenume']; ?></div>
 
+	<div class="row text-center">
+    	<div class="col-sm-4"><b>CNP:</b><?php echo $client['cnp']; ?></div>
+        <div class="col-sm-4"><b>Adresa:</b><?php echo $client['adresa']; ?></div>
+        <div class="col-sm-4"><b>Localitatea:</b><?php echo $client['loc']; ?></div>
+    </div>
+    <div class="row text-center">
+    	<div class="col-sm-4"><b>Telefon:</b><?php echo $client['telefon']; ?></div>
+        <div class="col-sm-4"><b>Email:</b><?php echo $client['email']; ?></div>
+        <div class="col-sm-4"><b>Inregistrat in:</b><?php echo $client['cd']; ?></div>
+    </div>
+
+<hr  />
+
+
+<form method="post" action="./?medic=1&new_content=1" enctype="multipart/form-data">
+    <div class="form-group">
+        <label>Titlu</label>
+        <input name="titlu" type="text" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label>Continut</label>
+        <textarea name="data" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+        <label>Fisiere</label>
+        <input name="fis[]" type="file" multiple="multiple" />
+    </div>
+    
+    <div class="form-group text-center">
+        <input type="submit" class="btn btn-success" value="Adauga" />
+    </div>
+</form>
+
 
 
 </div>

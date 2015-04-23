@@ -137,7 +137,10 @@ elseif(isset($_GET['medic']) && $_GET['medic']==1)
 	}
 	elseif(isset($_GET['view']) && is_numeric($_GET['view']))
 	{
+		
 		array_push($assets1, array('css', 'css/main.css'));
+		array_push($assets1, array('script', 'ckeditor/ckeditor.js'));
+		array_push($assets2, array('script', 'js/medic_single_view.js'));
 		array_push($files, 'header.php', 'left.php', 'before-c.php', 'top.php', 'medic_view.php', 'after-c.php',  'footer.php');
 		load_template($files, $assets1, $assets2);		
 	}
