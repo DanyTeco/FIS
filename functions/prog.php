@@ -8,7 +8,7 @@ $primaryKey = 'prid';
  
 
 $columns = array(
-    array( 'db' => 'nume', 'dt' => 0 ),
+    array( 'db' => 'nume',		'dt' => 0 ),
     array( 'db' => 'prenume',  	'dt' => 1 ),
     array( 'db' => 'cid',   	'dt' => 2 ),
 	array( 'db' => 'loc',     	'dt' => 3 ),
@@ -18,7 +18,7 @@ $columns = array(
         'db'        => 'prid',
         'dt'        => 6,
         'formatter' => function( $d, $row ) {
-            return '<a href="./?reg=1&edit_c='.$d.'" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span></a>';
+            return '<a href="./?reg=1&edit_prog='.$d.'" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span></a>';
         }
     )
     
@@ -58,6 +58,49 @@ function new_prog_dt()
 	);
 
 	
+}
+
+function add_new_prog()
+{
+	global $db;
+	$fields=array('cid', 'data', 'ora', 'min', 'loc', 'pers');
+	
+	$empty=0;
+	for($i=0;$i<count($fields);$i++)
+		if(strlen($_POST[$fields[$i]])==0)
+			$empty=1;
+
+	if(!$empty)
+	{
+		$result=$db->prepare("SELECT * FROM clients WHERE cid=?");
+		$result->execute(array($_POST['cid']));
+		$row=$result->fetch(PDO::FETCH_ASSOC);
+		$params=array();
+		$params[':nume']=$row['nume'];
+		$params[':prenume']=$row['prenume'];
+		$params[':cid']=$_POST['cid'];
+		$params[':data']=$_POST['data'].' '.$_POST['ora'].':'.$_POST['min'].':00';
+		$params[':loc']=$_POST['loc'];
+		$params[':author']=$_SESSION['user']['uid'];
+		$params[':pers']=$_POST['pers'];
+		$params[':cd']=date('Y-m-d H:i:s');	
+			
+			
+		$result=$db->prepare("INSERT INTO prog(`nume`, `prenume`, `cid`, `data`, `loc`, `pers`, `author`, `cd`) VALUES(:nume, :prenume, :cid, :data, :loc, :pers, :author, :cd)");
+		$result->execute($params);	
+		
+		
+		set_msg('success', 'Programare adaugata cu success');
+		header('Location: ./?reg=1&prog=1');
+		exit();
+	
+	}
+	else
+	{
+		set_msg('error', 'Toate campurile sunt obligatorii!. Completati corect formularul.');
+		header('Location: '.$_SERVER['HTTP_REFERER']);
+		exit();	
+	}
 }
 
 ?>

@@ -97,6 +97,10 @@ elseif(isset($_GET['reg']) && $_GET['reg']==1)
 		new_prog_dt();
 		exit();	
 	}
+	elseif(isset($_GET['do_new_prog']) && $_GET['do_new_prog']==1)
+	{
+		add_new_prog();	
+	}
 	elseif(isset($_GET['edit_c']) && is_numeric($_GET['edit_c']))
 	{
 		array_push($assets1, array('css', 'css/main.css'));

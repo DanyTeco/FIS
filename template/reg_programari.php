@@ -9,6 +9,7 @@
                 <tr>
                     <th>Nume</th>
                     <th>Prenume</th>
+                    <th>Pacient ID</th>
                     <th>Loc</th>
                     <th>Medic/Laborant</th>
                     <th>Data programarii</th>
@@ -20,6 +21,7 @@
                 <tr>
                     <th>Nume</th>
                     <th>Prenume</th>
+                    <th>Pacient ID</th>
                     <th>Loc</th>
                     <th>Medic/Laborant</th>
                     <th>Data programarii</th>
@@ -80,7 +82,7 @@
         </div>
          <div class="col-sm-2">
         	<label>Minute</label>
-            <select name="ora" class="form-control">
+            <select name="min" class="form-control">
             	<option value="10">10</option>
                 <option value="20">20</option>
                 <option value="30">30</option>
