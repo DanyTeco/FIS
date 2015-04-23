@@ -15,7 +15,7 @@
 		elseif($type=='medic'):
 	?>
     		<li><a href="./">Cabinet</a></li>
-            <li><a href="./?medic=1&view=1">Vizualizare pacient</a></li>
+            <li><a href="./?medic=1&g_view=1">Vizualizare pacient</a></li>
             <li><a href="./?medic=1&prog=1">Programari</a></li>
             <li><a href="./?medic=1&r=1">Rapoarte</a></li>
 	<?php

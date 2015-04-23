@@ -84,7 +84,7 @@ elseif(isset($_GET['reg']) && $_GET['reg']==1)
 	}
 	elseif(isset($_GET['view_dt']) && $_GET['view_dt']==1)
 	{
-		clients_view_dt();
+		clients_view_dt('registratura');
 		exit();	
 	}
 	elseif(isset($_GET['prog_dt']) && $_GET['prog_dt']==1)
@@ -113,6 +113,40 @@ elseif(isset($_GET['reg']) && $_GET['reg']==1)
 		array_push($files, 'header.php', 'left.php', 'before-c.php', 'top.php', 'registratura_fp.php', 'after-c.php',  'footer.php');
 		load_template($files, $assets1, $assets2);
 	}
+	
+	
+}
+elseif(isset($_GET['medic']) && $_GET['medic']==1)
+{
+	if(!have_rights('medic'))
+	{
+		set_msg('error', 'Nu aveti suficiente drepturi pentru aceasta arie');
+		header('Location: ./');
+		exit();
+	}
+	
+	if(isset($_GET['g_view']) && $_GET['g_view']==1)
+	{
+		array_push($assets1, array('css', 'css/main.css'));
+		array_push($assets1, array('css', 'css/jquery.dataTables.min.css'));
+		array_push($assets1, array('css', 'css/jquery.dataTables_themeroller.css'));
+		array_push($assets1, array('script', 'js/jquery.dataTables.min.js'));
+		array_push($assets1, array('script', 'js/medic_view.js'));
+		array_push($files, 'header.php', 'left.php', 'before-c.php', 'top.php', 'medic_g_view.php', 'after-c.php',  'footer.php');
+		load_template($files, $assets1, $assets2);	
+	}
+	elseif(isset($_GET['view_dt']) && $_GET['view_dt']==1)
+	{
+		clients_view_dt('medic');
+		exit();	
+	}
+	else
+	{
+		array_push($assets1, array('css', 'css/main.css'));
+		array_push($files, 'header.php', 'left.php', 'before-c.php', 'top.php', 'medic_fp.php', 'after-c.php',  'footer.php');
+		load_template($files, $assets1, $assets2);
+	}
+	
 	
 	
 }
