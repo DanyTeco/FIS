@@ -1,0 +1,49 @@
+/* CSS Document */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+body
+{
+	background-color: #e5e9ec !important;
+    font-family: 'Open Sans';	
+}
+
+.auth
+{
+	position:absolute;
+	top:40%;
+	left:0;
+	width:100%;	
+}
+
+.auth .info .title
+{
+	text-align:center;
+	color: #505458;
+	marign:10px 0px;
+	font-size:26px;
+}
+
+.auth .info .logo
+{
+	text-align:center;	
+	margin:10px 0px;
+}
+.auth .info .logo img
+{
+	max-height:100px;	
+}
+
+.auth .info .content span
+{
+	display:block;
+	margin:5px 0px;
+	padding:0px 5px;
+	color: #505458;
+	text-align:center;
+		
+}
+.bright
+{
+	border-right:#ddd 1px solid;	
+}
+
