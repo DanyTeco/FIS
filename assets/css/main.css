@@ -74,6 +74,7 @@ html, body
 	clear:both;	
 }
 
+
 .cc_title
 {
 	font-wight:bold;
@@ -94,4 +95,9 @@ html, body
 {
 	margin:10px 0px;
 	color:#900;	
+}
+
+.new_content_form
+{
+	display:none;	
 }

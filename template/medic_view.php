@@ -65,7 +65,14 @@
 
 </div>
 
+<div class="option_btn text-center">
+	<a href="#" class="btn btn-info" onclick="show_new_content();">Adauga continut</a>
+    <a href="#" class="btn btn-success">Emite reteta</a>
+    <a href="#" class="btn btn-success">Emite trimitere</a>
+    <a href="#" class="btn btn-warning">Emite factura</a>
+</div>
 
+<div class="new_content_form">
 <div class="title">Adauga continut</div>
 <form method="post" action="./?medic=1&new_content=1" enctype="multipart/form-data">
 <input name="cid" type="hidden" value="<?php echo $id; ?>" />
@@ -86,7 +93,7 @@
         <input type="submit" class="btn btn-success" value="Adauga" />
     </div>
 </form>
-
+</div>
 
 
 </div>
