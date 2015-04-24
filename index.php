@@ -144,6 +144,10 @@ elseif(isset($_GET['medic']) && $_GET['medic']==1)
 		array_push($files, 'header.php', 'left.php', 'before-c.php', 'top.php', 'medic_view.php', 'after-c.php',  'footer.php');
 		load_template($files, $assets1, $assets2);		
 	}
+	elseif(isset($_GET['new_content']) && $_GET['new_content']==1)
+	{
+		new_content();	
+	}
 	elseif(isset($_GET['view_dt']) && $_GET['view_dt']==1)
 	{
 		clients_view_dt('medic');

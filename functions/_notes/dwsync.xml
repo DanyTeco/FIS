@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="functions.php" server="t7.ro/public_html/fis/" local="130743018501219336" remote="130743018600000000" Dst="2" />
+<file name="functions.php" server="t7.ro/public_html/fis/" local="130743530272992722" remote="130743535800000000" Dst="2" />
 <file name="core.php" server="t7.ro/public_html/fis/" local="130722812611829610" remote="130722828600000000" Dst="2" />
 <file name="system.php" server="t7.ro/public_html/fis/" local="130741702659248430" remote="130741703400000000" Dst="2" />
 <file name="user.php" server="t7.ro/public_html/fis/" local="130740087917312811" remote="130740087600000000" Dst="2" />
@@ -8,4 +8,5 @@
 <file name="ssp.class.php" server="t7.ro/public_html/fis/" local="130740130626050478" remote="130740136200000000" Dst="2" />
 <file name="prog.php" server="t7.ro/public_html/fis/" local="130742807943850137" remote="130742808000000000" Dst="2" />
 <file name="upload.php" server="t7.ro/public_html/fis/" local="130743018339024454" remote="130743018600000000" Dst="2" />
+<file name="content.php" server="t7.ro/public_html/fis/" local="130743558610464867" remote="130743558600000000" Dst="2" />
 </dwsync>

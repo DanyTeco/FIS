@@ -73,3 +73,25 @@ html, body
 {
 	clear:both;	
 }
+
+.cc_title
+{
+	font-wight:bold;
+	font-size:24px;
+	margin:15px 0px;	
+}
+.cc_content
+{
+	margin-bottom:15px;	
+}
+.cc_files a
+{
+	display:block;
+	color:#444;
+		
+}
+.cc_error
+{
+	margin:10px 0px;
+	color:#900;	
+}

@@ -13,7 +13,7 @@
 	}
 	
 	$client=$result->fetch(PDO::FETCH_ASSOC);
-	$result=$db->prepare("SELECT * FROM content WHERE cid=?");
+	$result=$db->prepare("SELECT * FROM pacient_data WHERE cid=?");
 	$result->execute(array($id));
 	$data=$result->fetchAll(PDO::FETCH_ASSOC);
 	
@@ -36,8 +36,39 @@
 
 <hr  />
 
+<div class="client_content">
 
+<?php
+	for($i=0;$i<count($data);$i++)
+	{
+		if($data[$i]['author']==$_SESSION['user']['uid'])
+		{
+			echo '<div class="cc_title">'.$data[$i]['title'].'</div>';
+			echo '<div class="cc_content">'.$data[$i]['data'].'</div>';
+			echo '<div class="cc_files">Fisiere:';
+				if(strlen($files[$i]['files'])>0)
+				{
+					$files=explode('**', $data[$i]['files']);
+					for($j=0;$j<count($files);$j++)
+						echo '<a href="./uploaded/'.$files[$j].'" class="cc_files_link">'.$files[$j].'</a>';	
+				}
+			echo '</div>';	
+			echo '<hr />';
+		}
+		else
+		{
+			echo '<div class="cc_error">Nu aveti suficiente drepturi pentru a vedea acest continut!</div>';
+			echo '<hr />';	
+		}
+	}
+?>
+
+</div>
+
+
+<div class="title">Adauga continut</div>
 <form method="post" action="./?medic=1&new_content=1" enctype="multipart/form-data">
+<input name="cid" type="hidden" value="<?php echo $id; ?>" />
     <div class="form-group">
         <label>Titlu</label>
         <input name="titlu" type="text" class="form-control"/>
