@@ -53,6 +53,10 @@ html, body
 {
 }
 
+.fp
+{
+	padding-top:150px !important;	
+}
 .page
 {
 	padding:20px 10px;	
@@ -97,7 +101,7 @@ html, body
 	color:#900;	
 }
 
-.new_content_form
+.new_content_form, .new_invoice_form
 {
 	display:none;	
 }

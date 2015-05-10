@@ -6,6 +6,14 @@ function show_new_content()
 		$('.new_content_form').css('display', 'block');		
 }
 
+function show_new_invoice()
+{
+	if($('.new_invoice_form').css('display')=='block')
+		$('.new_invoice_form').css('display', 'none');
+	else
+		$('.new_invoice_form').css('display', 'block');		
+}
+
 
 CKEDITOR.replace( 'data', {
 	toolbar: [
@@ -13,3 +21,5 @@ CKEDITOR.replace( 'data', {
 		{ name: 'basicstyles', items: [ 'Bold', 'Italic' ] }
 	]
 } );
+
+

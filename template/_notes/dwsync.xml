@@ -3,9 +3,9 @@
 <file name="auth.php" server="t7.ro/public_html/fis/" local="130722878487813088" remote="130722891600000000" Dst="2" />
 <file name="footer.php" server="t7.ro/public_html/fis/" local="130743013047278941" remote="130743012600000000" Dst="2" />
 <file name="header.php" server="t7.ro/public_html/fis/" local="130741703583193205" remote="130741837800000000" Dst="2" />
-<file name="left.php" server="t7.ro/public_html/fis/" local="130742820038832908" remote="130742820000000000" Dst="2" />
-<file name="medic_fp.php" server="t7.ro/public_html/fis/" local="130722891673162041" remote="130722891600000000" Dst="2" />
-<file name="registratura_fp.php" server="t7.ro/public_html/fis/" local="130740080453612466" remote="130740091200000000" Dst="2" />
+<file name="left.php" server="t7.ro/public_html/fis/" local="130757703107662611" remote="130757714400000000" Dst="2" />
+<file name="medic_fp.php" server="t7.ro/public_html/fis/" local="130743572482484093" remote="130743572400000000" Dst="2" />
+<file name="registratura_fp.php" server="t7.ro/public_html/fis/" local="130743573462057488" remote="130757698200000000" Dst="2" />
 <file name="after-c.php" server="t7.ro/public_html/fis/" local="130740138853759148" remote="130740138600000000" Dst="2" />
 <file name="top.php" server="t7.ro/public_html/fis/" local="130741703636852276" remote="130741703400000000" Dst="2" />
 <file name="before-c.php" server="t7.ro/public_html/fis/" local="130740138773539521" remote="130740138600000000" Dst="2" />
@@ -14,5 +14,7 @@
 <file name="reg_edit.php" server="t7.ro/public_html/fis/" local="130741714124807803" remote="130741714200000000" Dst="2" />
 <file name="reg_programari.php" server="t7.ro/public_html/fis/" local="130742808217289084" remote="130742808000000000" Dst="2" />
 <file name="medic_g_view.php" server="t7.ro/public_html/fis/" local="130742819263768067" remote="130742819400000000" Dst="2" />
-<file name="medic_view.php" server="t7.ro/public_html/fis/" local="130743563748799028" remote="130743564600000000" Dst="2" />
+<file name="medic_view.php" server="t7.ro/public_html/fis/" local="130757697136095383" remote="130757697600000000" Dst="2" />
+<file name="laborant_fp.php" server="t7.ro/public_html/fis/" local="130743573598472083" remote="130743573600000000" Dst="2" />
+<file name="reg_inv.php" server="t7.ro/public_html/fis/" local="130757705646531565" remote="130757714400000000" Dst="2" />
 </dwsync>

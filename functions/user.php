@@ -80,6 +80,18 @@ function have_rights($type)
 }
 
 
+function get_user($id)
+{
+	global $db;
+	
+	$result=$db->prepare("SELECT nume, prenume, type, licenta FROM user WHERE uid=?");
+	$result->execute(array($id));
+	
+	return $result->fetch(PDO::FETCH_ASSOC);	
+}
+
+
+
 
 
 

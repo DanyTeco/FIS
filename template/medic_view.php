@@ -13,7 +13,7 @@
 	}
 	
 	$client=$result->fetch(PDO::FETCH_ASSOC);
-	$result=$db->prepare("SELECT * FROM pacient_data WHERE cid=?");
+	$result=$db->prepare("SELECT * FROM content WHERE cid=?");
 	$result->execute(array($id));
 	$data=$result->fetchAll(PDO::FETCH_ASSOC);
 	
@@ -45,14 +45,16 @@
 		{
 			echo '<div class="cc_title">'.$data[$i]['title'].'</div>';
 			echo '<div class="cc_content">'.$data[$i]['data'].'</div>';
-			echo '<div class="cc_files">Fisiere:';
-				if(strlen($files[$i]['files'])>0)
+			
+				if(strlen($data[$i]['files'])>0)
 				{
+					echo '<div class="cc_files">Fisiere:';
 					$files=explode('**', $data[$i]['files']);
 					for($j=0;$j<count($files);$j++)
-						echo '<a href="./uploaded/'.$files[$j].'" class="cc_files_link">'.$files[$j].'</a>';	
+						echo '<a href="./uploaded/'.$files[$j].'" class="cc_files_link"><span class="btn btn-info glyphicon glyphicon-save-file"></span> '.$files[$j].'</a>';	
+					echo '</div>';
 				}
-			echo '</div>';	
+				
 			echo '<hr />';
 		}
 		else
@@ -69,7 +71,7 @@
 	<a href="#" class="btn btn-info" onclick="show_new_content();">Adauga continut</a>
     <a href="#" class="btn btn-success">Emite reteta</a>
     <a href="#" class="btn btn-success">Emite trimitere</a>
-    <a href="#" class="btn btn-warning">Emite factura</a>
+    <a href="#" class="btn btn-warning" onclick="show_new_invoice();">Emite factura</a>
 </div>
 
 <div class="new_content_form">
@@ -95,5 +97,24 @@
 </form>
 </div>
 
+
+<div class="new_invoice_form">
+<div class="title">Adauga factura</div>
+<form method="post" action="./?medic=1&new_invoice=1">
+<div class="col-sm-6 col-sm-offset-3">
+<input name="cid" type="hidden" value="<?php echo $id; ?>" />
+<div class="form-group">
+	<label>Suma</label>
+    <input name="suma" class="form-control" type="suma" />
+</div>	
+<div class="form-group">
+	<label>Info</label>
+    <textarea name="info" class="form-control" style="height:75px;"></textarea>
+</div>	
+<div class="form-group text-center"><input type="submit" class="btn btn-success" value="Adauga factura" /></div>
+</div>
+</form>
+
+</div>
 
 </div>

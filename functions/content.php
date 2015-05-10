@@ -30,7 +30,7 @@ function new_content()
 	
 	try
 	{
-		$result=$db->prepare("INSERT INTO pacient_data(`cid`, `title`, `data`, `files`, `author`, `cd`) VALUES(:cid, :titlu, :data, :files, :author, :cd)");
+		$result=$db->prepare("INSERT INTO content(`cid`, `title`, `data`, `files`, `author`, `cd`) VALUES(:cid, :titlu, :data, :files, :author, :cd)");
 		$result->execute($params);
 	}
 	catch(PDOException $e)

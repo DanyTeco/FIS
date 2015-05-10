@@ -11,6 +11,7 @@ require_once('user.php');
 require_once('client.php');
 require_once('prog.php');
 require_once('content.php');
+require_once('invoice.php');
 
 
 

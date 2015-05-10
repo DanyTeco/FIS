@@ -9,5 +9,6 @@
 <file name="jquery.dataTables.js" server="t7.ro/public_html/fis/" local="130725365220000000" remote="130740136200000000" Dst="2" />
 <file name="reg_prog.js" server="t7.ro/public_html/fis/" local="130742600670834441" remote="130742600400000000" Dst="2" />
 <file name="medic_view.js" server="t7.ro/public_html/fis/" local="130742819351817266" remote="130742820000000000" Dst="2" />
-<file name="medic_single_view.js" server="t7.ro/public_html/fis/" local="130743564850787130" remote="130743564600000000" Dst="2" />
+<file name="medic_single_view.js" server="t7.ro/public_html/fis/" local="130757696710195994" remote="130757700000000000" Dst="2" />
+<file name="reg_inv.js" server="t7.ro/public_html/fis/" local="130757715480203432" remote="130757715000000000" Dst="2" />
 </dwsync>

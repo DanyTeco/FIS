@@ -141,5 +141,15 @@ echo json_encode(
 	
 }
 
+function get_client($id)
+{
+	global $db;
+	
+	$result=$db->prepare("SELECT * FROM clients WHERE cid=?");
+	$result->execute(array($id));
+	
+	return $result->fetch(PDO::FETCH_ASSOC);	
+}
+
 
 ?>
