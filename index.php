@@ -112,6 +112,10 @@ elseif(isset($_GET['reg']) && $_GET['reg']==1)
 		invoice_dt();
 		exit();	
 	}
+	elseif(isset($_GET['edit_inv']) && $_GET['edit_inv']==1)
+	{
+		edit_inv();	
+	}
 	elseif(isset($_GET['do_new_prog']) && $_GET['do_new_prog']==1)
 	{
 		add_new_prog();	

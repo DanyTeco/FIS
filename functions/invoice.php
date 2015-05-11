@@ -74,17 +74,16 @@ $columns = array(
 			return $client['nume'].' '.$client['prenume'];
         } ),
 	array( 'db' => 'cd',     'dt' => 4 ),
-	array( 'db' => 'incasat',     'dt' => 5,
-	'formatter' => function( $d, $row ) {
-			$client=get_client($d);
-			return $client['nume'].' '.$client['prenume'];
-        } ),
+	array( 'db' => 'incasat',     'dt' => 5),
 	array( 'db' => 'incasat',     'dt' => 6,
 	'formatter' => function( $d, $row ) {
 			return $row['val']-$d;
         } ),
 	
-	array( 'db' => 'invid',     'dt' => 7 )
+	array( 'db' => 'invid',     'dt' => 7,
+	'formatter' => function( $d, $row ) {
+			return '<a href="./?reg=1&inv=1&edit='.$d.'" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></a>';
+        } )
     
 );
   
@@ -94,6 +93,42 @@ echo json_encode(
 );
 
 	
+}
+
+
+function edit_inv()
+{
+	global $db;
+	if(!isset($_POST['invid']) || !is_numeric($_POST['invid']))
+	{
+		set_msg('error', 'Cerere invalida!');
+		header('Location: '.$_SERVER['HTTP_REFERER']);
+		exit();	
+	}
+	
+	if(!isset($_POST['incasat']) &&  !is_numeric($_POST['incasat']))
+	{
+		set_msg('error', 'Cerere invalida!');
+		header('Location: '.$_SERVER['HTTP_REFERER']);
+		exit();	
+	}
+	try
+	{
+		$result=$db->prepare("UPDATE invoice SET incasat=? WHERE invid=?");
+		$result->execute(array($_POST['incasat'], $_POST['invid']));
+	}
+	catch(PDOException $e)
+	{
+		//echo $e->getMessage();
+		set_msg('error', 'Edit invoice DB ERR', 0, 1, '', $e->getCode().':'.$e->getMessage());
+		set_msg('error', 'Internal error. Please try again later');
+		header('Location: '.$_SERVER['HTTP_REFERER']);
+		exit();
+	}
+
+	set_msg('success', 'Factura editata cu succes');
+	header('Location: ./?reg=1&inv=1');
+	exit();
 }
 
 
