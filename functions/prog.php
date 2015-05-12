@@ -12,7 +12,11 @@ $columns = array(
     array( 'db' => 'prenume',  	'dt' => 1 ),
     array( 'db' => 'cid',   	'dt' => 2 ),
 	array( 'db' => 'loc',     	'dt' => 3 ),
-	array( 'db' => 'pers',     	'dt' => 4 ),
+	array( 'db' => 'pers',     	'dt' => 4,
+	'formatter' => function( $d, $row ) {
+		$u=get_user($d);
+		return $u['nume'].' '.$u['prenume'];
+	}),
 	array( 'db' => 'data',     	'dt' => 5 ),
 	array(
         'db'        => 'prid',
