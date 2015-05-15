@@ -107,7 +107,21 @@ html, body
 	color:#900;	
 }
 
-.new_content_form, .new_invoice_form
+.new_content_form, .new_invoice_form, .new_recipes_form, .new_referral_form
 {
 	display:none;	
+}
+
+.rec-item
+{
+	margin:10px;
+	padding:10px;
+	background:rgba(70, 135, 0, 0.2);	
+}
+
+.ref-item
+{
+	margin:10px;
+	padding:10px;
+	background:rgba(0, 144, 255, 0.2);	
 }

@@ -126,6 +126,10 @@ elseif(isset($_GET['reg']) && $_GET['reg']==1)
 		array_push($files, 'header.php', 'left.php', 'before-c.php', 'top.php', 'reg_edit.php', 'after-c.php',  'footer.php');
 		load_template($files, $assets1, $assets2);
 	}
+	elseif(isset($_GET['delete_prog']) && is_numeric($_GET['delete_prog']))
+	{
+		delete_prog();	
+	}
 	else
 	{
 		array_push($assets1, array('css', 'css/main.css'));
@@ -203,6 +207,14 @@ elseif(isset($_GET['medic']) && $_GET['medic']==1)
 	elseif(isset($_GET['medic_new_prog']) && $_GET['medic_new_prog']==1)
 	{
 		add_new_prog();	
+	}
+	elseif(isset($_GET['new_recipes']) && $_GET['new_recipes']==1)
+	{
+		new_recipes();	
+	}
+	elseif(isset($_GET['new_referral']) && $_GET['new_referral']==1)
+	{
+		new_referral();	
 	}
 	else
 	{

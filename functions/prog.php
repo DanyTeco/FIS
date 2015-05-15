@@ -22,7 +22,10 @@ $columns = array(
         'db'        => 'prid',
         'dt'        => 6,
         'formatter' => function( $d, $row ) {
-            return '<a href="./?reg=1&edit_prog='.$d.'" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span></a>';
+			if($_SESSION['user']['type']=='registratura')
+            	return '<a href="./?reg=1&delete_prog='.$d.'" class="btn btn-danger btn-sm" onClick="return confirm(\'Esti sigur ca vrei sa stergi aceasta programare?\'); "><span class="glyphicon glyphicon-remove"></span></a>';
+			else
+				return '';
         }
     )
     
@@ -131,6 +134,20 @@ function add_new_prog()
 		header('Location: '.$_SERVER['HTTP_REFERER']);
 		exit();	
 	}
+}
+
+function delete_prog()
+{
+	global $db;
+	$del=$_GET['delete_prog'];
+	
+	$result=$db->prepare("DELETE FROM prog WHERE prid=?");
+	$result->execute(array($del));	
+	
+	set_msg('success', 'Programare stearsa cu success.');
+	header('Location: '.$_SERVER['HTTP_REFERER']);
+	exit();	
+	
 }
 
 ?>

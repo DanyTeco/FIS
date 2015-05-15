@@ -13,7 +13,21 @@ function show_new_invoice()
 	else
 		$('.new_invoice_form').css('display', 'block');		
 }
+function show_new_recipes()
+{
+	if($('.new_recipes_form').css('display')=='block')
+		$('.new_recipes_form').css('display', 'none');
+	else
+		$('.new_recipes_form').css('display', 'block');		
+}
 
+function show_new_referral()
+{
+	if($('.new_referral_form').css('display')=='block')
+		$('.new_referral_form').css('display', 'none');
+	else
+		$('.new_referral_form').css('display', 'block');		
+}
 
 CKEDITOR.replace( 'data', {
 	toolbar: [

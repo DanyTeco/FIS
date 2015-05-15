@@ -40,10 +40,5 @@
 
 </div>
 
-<div class="col-sm-4">
-	Short help or description
-
-</div>
-
 
 </div>
