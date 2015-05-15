@@ -36,6 +36,32 @@ echo json_encode(
 	
 }
 
+function myprog_dt()
+{
+
+$table = 'prog';
+$primaryKey = 'prid';
+ 
+
+$columns = array(
+    array( 'db' => 'nume',		'dt' => 0 ),
+    array( 'db' => 'prenume',  	'dt' => 1 ),
+	array( 'db' => 'data',     	'dt' => 2 )
+    );
+    
+
+
+$where=array('pers'=>$_SESSION['user']['uid']);
+  
+ 
+echo json_encode(
+    SSP::simple( $_GET, $table, $primaryKey, $columns, $where )
+);
+
+	
+}
+
+
 function new_prog_dt()
 {
 
@@ -95,7 +121,7 @@ function add_new_prog()
 		
 		
 		set_msg('success', 'Programare adaugata cu success');
-		header('Location: ./?reg=1&prog=1');
+		header('Location: '.$_SERVER['HTTP_REFERER']);
 		exit();
 	
 	}

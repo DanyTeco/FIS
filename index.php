@@ -1,7 +1,7 @@
 <?php
 include("include/top.php");
 include("functions/functions.php");
-
+//print_r($_SESSION);
 $assets1=array();
 $assets2=array();
 $files=array();
@@ -165,6 +165,18 @@ elseif(isset($_GET['medic']) && $_GET['medic']==1)
 		array_push($files, 'header.php', 'left.php', 'before-c.php', 'top.php', 'medic_view.php', 'after-c.php',  'footer.php');
 		load_template($files, $assets1, $assets2);		
 	}
+	elseif(isset($_GET['prog']) && $_GET['prog']==1)
+	{
+		array_push($assets1, array('css', 'css/main.css'));
+		array_push($assets1, array('css', 'https://code.jquery.com/ui/1.11.4/themes/ui-darkness/jquery-ui.css'));
+		array_push($assets1, array('css', 'css/jquery.dataTables.min.css'));
+		array_push($assets1, array('css', 'css/jquery.dataTables_themeroller.css'));
+		array_push($assets1, array('script', 'js/jquery.dataTables.min.js'));
+		array_push($assets1, array('script', 'https://code.jquery.com/ui/1.11.4/jquery-ui.min.js'));
+		array_push($assets1, array('script', 'js/medic_prog.js'));
+		array_push($files, 'header.php', 'left.php', 'before-c.php', 'top.php', 'medic_programari.php', 'after-c.php',  'footer.php');
+		load_template($files, $assets1, $assets2);	
+	}
 	elseif(isset($_GET['new_content']) && $_GET['new_content']==1)
 	{
 		new_content();	
@@ -178,10 +190,103 @@ elseif(isset($_GET['medic']) && $_GET['medic']==1)
 		clients_view_dt('medic');
 		exit();	
 	}
+	elseif(isset($_GET['new_prog_dt']) && $_GET['new_prog_dt']==1)
+	{
+		new_prog_dt();
+		exit();	
+	}
+	elseif(isset($_GET['myprog_dt']) && $_GET['myprog_dt']==1)
+	{
+		myprog_dt();
+		exit();	
+	}
+	elseif(isset($_GET['medic_new_prog']) && $_GET['medic_new_prog']==1)
+	{
+		add_new_prog();	
+	}
 	else
 	{
 		array_push($assets1, array('css', 'css/main.css'));
 		array_push($files, 'header.php', 'left.php', 'before-c.php', 'top.php', 'medic_fp.php', 'after-c.php',  'footer.php');
+		load_template($files, $assets1, $assets2);
+	}
+	
+	
+	
+}
+elseif(isset($_GET['laborant']) && $_GET['laborant']==1)
+{
+	if(!have_rights('laborant'))
+	{
+		set_msg('error', 'Nu aveti suficiente drepturi pentru aceasta arie');
+		header('Location: ./');
+		exit();
+	}
+	
+	if(isset($_GET['g_view']) && $_GET['g_view']==1)
+	{
+		array_push($assets1, array('css', 'css/main.css'));
+		array_push($assets1, array('css', 'css/jquery.dataTables.min.css'));
+		array_push($assets1, array('css', 'css/jquery.dataTables_themeroller.css'));
+		array_push($assets1, array('script', 'js/jquery.dataTables.min.js'));
+		array_push($assets1, array('script', 'js/laborant_view.js'));
+		array_push($files, 'header.php', 'left.php', 'before-c.php', 'top.php', 'laborant_g_view.php', 'after-c.php',  'footer.php');
+		load_template($files, $assets1, $assets2);	
+	}
+	elseif(isset($_GET['view']) && is_numeric($_GET['view']))
+	{
+		
+		array_push($assets1, array('css', 'css/main.css'));
+		array_push($assets1, array('css', 'https://code.jquery.com/ui/1.11.4/themes/ui-darkness/jquery-ui.css'));
+		array_push($assets1, array('script', 'ckeditor/ckeditor.js'));
+		array_push($assets1, array('script', 'https://code.jquery.com/ui/1.11.4/jquery-ui.min.js'));
+		array_push($assets2, array('script', 'js/laborant_s_view.js'));
+		array_push($files, 'header.php', 'left.php', 'before-c.php', 'top.php', 'laborant_view.php', 'after-c.php',  'footer.php');
+		load_template($files, $assets1, $assets2);		
+	}
+	elseif(isset($_GET['prog']) && $_GET['prog']==1)
+	{
+		array_push($assets1, array('css', 'css/main.css'));
+		array_push($assets1, array('css', 'https://code.jquery.com/ui/1.11.4/themes/ui-darkness/jquery-ui.css'));
+		array_push($assets1, array('css', 'css/jquery.dataTables.min.css'));
+		array_push($assets1, array('css', 'css/jquery.dataTables_themeroller.css'));
+		array_push($assets1, array('script', 'js/jquery.dataTables.min.js'));
+		array_push($assets1, array('script', 'https://code.jquery.com/ui/1.11.4/jquery-ui.min.js'));
+		array_push($assets1, array('script', 'js/laborant_prog.js'));
+		array_push($files, 'header.php', 'left.php', 'before-c.php', 'top.php', 'laborant_programari.php', 'after-c.php',  'footer.php');
+		load_template($files, $assets1, $assets2);	
+	}
+	elseif(isset($_GET['new_content']) && $_GET['new_content']==1)
+	{
+		new_content();	
+	}
+	elseif(isset($_GET['new_invoice']) && $_GET['new_invoice']==1)
+	{
+		new_invoice();	
+	}
+	elseif(isset($_GET['view_dt']) && $_GET['view_dt']==1)
+	{
+		clients_view_dt('laborant');
+		exit();	
+	}
+	elseif(isset($_GET['new_prog_dt']) && $_GET['new_prog_dt']==1)
+	{
+		new_prog_dt();
+		exit();	
+	}
+	elseif(isset($_GET['myprog_dt']) && $_GET['myprog_dt']==1)
+	{
+		myprog_dt();
+		exit();	
+	}
+	elseif(isset($_GET['medic_new_prog']) && $_GET['medic_new_prog']==1)
+	{
+		add_new_prog();	
+	}
+	else
+	{
+		array_push($assets1, array('css', 'css/main.css'));
+		array_push($files, 'header.php', 'left.php', 'before-c.php', 'top.php', 'laborant_fp.php', 'after-c.php',  'footer.php');
 		load_template($files, $assets1, $assets2);
 	}
 	

@@ -41,8 +41,7 @@
 <?php
 	for($i=0;$i<count($data);$i++)
 	{
-		$u=get_user($data[$i]['author']);
-		if($data[$i]['author']==$_SESSION['user']['uid'] || $u['type']=='laborant')
+		if($data[$i]['author']==$_SESSION['user']['uid'])
 		{
 			echo '<div class="cc_title">'.$data[$i]['cd'].': '.$data[$i]['title'].'</div>';
 			echo '<div class="cc_content">'.$data[$i]['data'].'</div>';
@@ -70,14 +69,12 @@
 
 <div class="option_btn text-center">
 	<a href="#" class="btn btn-info" onclick="show_new_content();">Adauga continut</a>
-    <a href="#" class="btn btn-success">Emite reteta</a>
-    <a href="#" class="btn btn-success">Emite trimitere</a>
     <a href="#" class="btn btn-warning" onclick="show_new_invoice();">Emite factura</a>
 </div>
 
 <div class="new_content_form">
 <div class="title">Adauga continut</div>
-<form method="post" action="./?medic=1&new_content=1" enctype="multipart/form-data">
+<form method="post" action="./?laborant=1&new_content=1" enctype="multipart/form-data">
 <input name="cid" type="hidden" value="<?php echo $id; ?>" />
     <div class="form-group">
         <label>Titlu</label>
@@ -91,7 +88,10 @@
         <label>Fisiere</label>
         <input name="fis[]" type="file" multiple="multiple" />
     </div>
-    
+    <div class="form-group">
+    	<a href="#" class="btn btn-info" onclick="mediqalizer();">MedIQalizer</a>
+    	<a href="#" class="btn btn-warning" onclick="mediqrad();">MedIQrad</a>
+    </div>
     <div class="form-group text-center">
         <input type="submit" class="btn btn-success" value="Adauga" />
     </div>
@@ -101,7 +101,7 @@
 
 <div class="new_invoice_form">
 <div class="title">Adauga factura</div>
-<form method="post" action="./?medic=1&new_invoice=1">
+<form method="post" action="./?laborant=1&new_invoice=1">
 <div class="col-sm-6 col-sm-offset-3">
 <input name="cid" type="hidden" value="<?php echo $id; ?>" />
 <div class="form-group">

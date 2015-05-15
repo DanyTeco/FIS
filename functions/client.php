@@ -122,9 +122,9 @@ $columns = array(
         'db'        => 'cid',
         'dt'        => 8,
         'formatter' => function( $d, $row ) {
-			if(isset($_SESSION['user']['type']) && $_SESSION['user']['type']=='medic')
-				return '<a href="./?medic=1&view='.$d.'" class="btn btn-success"><span class="glyphicon glyphicon-eye-open"></span></a>';
-			elseif(isset($_SESSION['user']['type']) && $_SESSION['user']['type']='registratura')
+			if(isset($_SESSION['user']['type']) && ($_SESSION['user']['type']=='medic' || $_SESSION['user']['type']=='laborant'))
+				return '<a href="./?'.$_SESSION['user']['type'].'=1&view='.$d.'" class="btn btn-success"><span class="glyphicon glyphicon-eye-open"></span></a>';
+			elseif(isset($_SESSION['user']['type']) && $_SESSION['user']['type']=='registratura')
             	return '<a href="./?reg=1&edit_c='.$d.'" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span></a>';
 			else
 				return "-";

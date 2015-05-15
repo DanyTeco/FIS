@@ -228,16 +228,30 @@ class SSP {
 	 *  @param  array $columns Column information array
 	 *  @return array          Server-side processing response array
 	 */
-	static function simple ( $request, $table, $primaryKey, $columns )
+	static function simple ( $request, $table, $primaryKey, $columns, $w=array() )
 	{
 		$bindings = array();
 		global $db;
-
+		$where='';
 		// Build the SQL query string from the request
 		$limit = self::limit( $request, $columns );
 		$order = self::order( $request, $columns );
 		$where = self::filter( $request, $columns, $bindings );
-
+		
+		
+		if(count($w)>0)
+		{
+			foreach($w as $key => $item) {
+				$where.=(strlen($where)>0 ? ' AND `'.$key.'`='.$item : ' WHERE `'.$key.'`='.$item);
+			}
+		}
+		
+		//echo $where;
+		
+		//for($k=0;$k<count($w);$k++)
+		//	$where.=(strlen($where)>0 ? ' AND `'.key($w[$k]).'`="'.$w[$k].'"' : ' WHERE `'.key($w[$k]).'`="'.$w[$k].'"');
+		
+		//echo $where;
 		// Main query to actually get the data
 		$data = self::sql_exec( $db, $bindings,
 			"SELECT SQL_CALC_FOUND_ROWS `".implode("`, `", self::pluck($columns, 'db'))."`
@@ -246,6 +260,13 @@ class SSP {
 			 $order
 			 $limit"
 		);
+		
+		/*echo "SELECT SQL_CALC_FOUND_ROWS `".implode("`, `", self::pluck($columns, 'db'))."`
+			 FROM `$table`
+			 $where
+			 $order
+			 $limit";
+		*/
 
 		// Data set length after filtering
 		$resFilterLength = self::sql_exec( $db,

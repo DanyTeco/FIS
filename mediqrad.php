@@ -1,0 +1,1 @@
+<?php echo 'img-'.rand(1,3).'.jpg'; ?>

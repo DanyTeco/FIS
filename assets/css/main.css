@@ -89,6 +89,12 @@ html, body
 {
 	margin-bottom:15px;	
 }
+.cc_content img
+{
+	max-width:80%;
+	display:block;
+	margin:10px auto;	
+}
 .cc_files a
 {
 	display:block;

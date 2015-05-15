@@ -22,10 +22,9 @@
 		elseif($type=='laborant'):
 	?>
     		<li><a href="./">Laborator</a></li>
-            <li><a href="./?lab=1&view=1">Vizualizare pacient</a></li>
-            <li><a href="./?lab=1&prog=1">Programari</a></li>
-            <li><a href="./?lab=1&hw=1">Echipament</a></li>
-            <li><a href="./?lab=1&r=1">Rapoarte</a></li>
+            <li><a href="./?laborant=1&g_view=1">Vizualizare pacient</a></li>
+            <li><a href="./?laborant=1&prog=1">Programari</a></li>
+            <li><a href="./?laborant=1&r=1">Rapoarte</a></li>
 	<?php
 		endif;
 	?>
