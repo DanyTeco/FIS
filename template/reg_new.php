@@ -2,7 +2,7 @@
 
 <div class="title">Inregistrare pacient nou</div>
 
-<div class="col-sm-8">
+<div class="col-sm-6 col-sm-offset-3">
 	<form method="post" action="./?reg=1&add_new=1">
     	<div class="form-group">
         	<label>Nume</label>

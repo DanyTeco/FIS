@@ -22,7 +22,7 @@ $columns = array(
         'db'        => 'prid',
         'dt'        => 6,
         'formatter' => function( $d, $row ) {
-			if($_SESSION['user']['type']=='registratura')
+			if($_SESSION['user']['type']=='registratura' || $_SESSION['user']['type']=='admin')
             	return '<a href="./?reg=1&delete_prog='.$d.'" class="btn btn-danger btn-sm" onClick="return confirm(\'Esti sigur ca vrei sa stergi aceasta programare?\'); "><span class="glyphicon glyphicon-remove"></span></a>';
 			else
 				return '';
