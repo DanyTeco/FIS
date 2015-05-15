@@ -80,7 +80,7 @@
 				{
 					echo '<div><b>Catre:'.$rec[$i]['to'].'</b></div>';
 					echo '<div><b>Diagnostic:'.$rec[$i]['diagnosis'].'</b></div>';
-					echo '<div><p>Lista medicamente:'.$rec[$i]['content'].'</p></div>';
+					echo '<div><p>Detalii:'.$rec[$i]['content'].'</p></div>';
 					echo '<div><p>Data:'.$rec[$i]['cd'].'</p></div>';
 				}
 				else
@@ -196,11 +196,12 @@
             </div>
             <div class="form-group">
             	<label>Lista medicamente</label>
-                <textarea name="content" class="form-control" style="height:300px;"></textarea>
+                <textarea name="recipe" class="form-control" style="height:300px;"></textarea>
             </div>
             <div class="form-group text-center"><input type="submit" value="Adauga reteta" class="btn btn-info" /></div>
         </div>
     </form>
+    <div style="clear:both;"></div>
 </div>
 
 <div class="new_referral_form">
@@ -225,11 +226,12 @@
             </div>
             <div class="form-group">
             	<label>Detalii</label>
-                <textarea name="content" class="form-control" style="height:300px;"></textarea>
+                <textarea name="referral" class="form-control" style="height:300px;"></textarea>
             </div>
             <div class="form-group text-center"><input type="submit" value="Adauga trimitere" class="btn btn-info" /></div>
         </div>
     </form>
+    <div style="clear:both;"></div>
 </div>
 
 </div>

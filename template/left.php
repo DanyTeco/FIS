@@ -30,6 +30,8 @@
             <li><a href="./?reg=1&new=1">Inregistrare pacient</a></li>
             <li><a href="./?reg=1&view=1">Vizualizare pacient</a></li>
             <li><a href="./?reg=1&inv=1">Facturi/Incasari</a></li>
+            <li><a href="./?admin=1&users=1">Utilizatori</a></li>
+            <li><a href="./?admin=1&users_log=1">Utilizatori log</a></li>
             
             
 	<?php

@@ -3,7 +3,7 @@
 <file name="auth.php" server="t7.ro/public_html/fis/" local="130722878487813088" remote="130722891600000000" Dst="2" />
 <file name="footer.php" server="t7.ro/public_html/fis/" local="130743013047278941" remote="130743012600000000" Dst="2" />
 <file name="header.php" server="t7.ro/public_html/fis/" local="130741703583193205" remote="130741837800000000" Dst="2" />
-<file name="left.php" server="t7.ro/public_html/fis/" local="130761749151949496" remote="130761748800000000" Dst="2" />
+<file name="left.php" server="t7.ro/public_html/fis/" local="130761855114764096" remote="130761855000000000" Dst="2" />
 <file name="medic_fp.php" server="t7.ro/public_html/fis/" local="130743572482484093" remote="130743572400000000" Dst="2" />
 <file name="registratura_fp.php" server="t7.ro/public_html/fis/" local="130743573462057488" remote="130757698200000000" Dst="2" />
 <file name="after-c.php" server="t7.ro/public_html/fis/" local="130740138853759148" remote="130740138600000000" Dst="2" />
@@ -14,7 +14,7 @@
 <file name="reg_edit.php" server="t7.ro/public_html/fis/" local="130741714124807803" remote="130741714200000000" Dst="2" />
 <file name="reg_programari.php" server="t7.ro/public_html/fis/" local="130760033134200023" remote="130760032800000000" Dst="2" />
 <file name="medic_g_view.php" server="t7.ro/public_html/fis/" local="130742819263768067" remote="130742819400000000" Dst="2" />
-<file name="medic_view.php" server="t7.ro/public_html/fis/" local="130761733946207443" remote="130761733800000000" Dst="2" />
+<file name="medic_view.php" server="t7.ro/public_html/fis/" local="130761757233027016" remote="130761757200000000" Dst="2" />
 <file name="laborant_fp.php" server="t7.ro/public_html/fis/" local="130743573598472083" remote="130743573600000000" Dst="2" />
 <file name="reg_inv.php" server="t7.ro/public_html/fis/" local="130757751998604871" remote="130757751600000000" Dst="2" />
 <file name="medic_programari.php" server="t7.ro/public_html/fis/" local="130761211216870518" remote="130761211200000000" Dst="2" />
@@ -22,4 +22,6 @@
 <file name="laborant_view.php" server="t7.ro/public_html/fis/" local="130761214151959971" remote="130761222000000000" Dst="2" />
 <file name="laborant_programari.php" server="t7.ro/public_html/fis/" local="130761211656143016" remote="130761211800000000" Dst="2" />
 <file name="admin_fp.php" server="t7.ro/public_html/fis/" local="130761745480029037" remote="130761745200000000" Dst="2" />
+<file name="admin_users.php" server="t7.ro/public_html/fis/" local="130761845491418332" remote="130761845400000000" Dst="2" />
+<file name="admin_users_log.php" server="t7.ro/public_html/fis/" local="130761875869379652" remote="130761875400000000" Dst="2" />
 </dwsync>

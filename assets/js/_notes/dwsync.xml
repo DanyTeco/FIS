@@ -5,14 +5,18 @@
 <file name="bootstrap.min.js" server="t7.ro/public_html/fis/" local="130709617300000000" remote="130722828600000000" Dst="2" />
 <file name="jquery.dataTables.min.js" server="t7.ro/public_html/fis/" local="130725365220000000" remote="130740136200000000" Dst="2" />
 <file name="jquery.js" server="t7.ro/public_html/fis/" local="130725365220000000" remote="130740136200000000" Dst="2" />
-<file name="reg_view.js" server="t7.ro/public_html/fis/" local="130740113061019440" remote="130740136200000000" Dst="2" />
+<file name="reg_view.js" server="t7.ro/public_html/fis/" local="130761872269440357" remote="130761871800000000" Dst="2" />
 <file name="jquery.dataTables.js" server="t7.ro/public_html/fis/" local="130725365220000000" remote="130740136200000000" Dst="2" />
 <file name="reg_prog.js" server="t7.ro/public_html/fis/" local="130742600670834441" remote="130742600400000000" Dst="2" />
 <file name="medic_view.js" server="t7.ro/public_html/fis/" local="130742819351817266" remote="130742820000000000" Dst="2" />
-<file name="medic_single_view.js" server="t7.ro/public_html/fis/" local="130761722455518533" remote="130761722400000000" Dst="2" />
-<file name="reg_inv.js" server="t7.ro/public_html/fis/" local="130757715480203432" remote="130757715000000000" Dst="2" />
+<file name="medic_single_view.js" server="t7.ro/public_html/fis/" local="130761753765200488" remote="130761754800000000" Dst="2" />
+<file name="reg_inv.js" server="t7.ro/public_html/fis/" local="130761872812871200" remote="130761873000000000" Dst="2" />
 <file name="medic_prog.js" server="t7.ro/public_html/fis/" local="130760087420155435" remote="130760087400000000" Dst="2" />
 <file name="laborant_view.js" server="t7.ro/public_html/fis/" local="130761143103348098" remote="130761142800000000" Dst="2" />
 <file name="laborant_s_view.js" server="t7.ro/public_html/fis/" local="130761215587582983" remote="130761215400000000" Dst="2" />
 <file name="laborant_prog.js" server="t7.ro/public_html/fis/" local="130761212125247215" remote="130761211800000000" Dst="2" />
+<file name="admin_users_log.js" server="t7.ro/public_html/fis/" local="130761859949107078" remote="130761859800000000" Dst="2" />
+<file name="jquery-2.1.4.min.js" server="t7.ro/public_html/fis/" local="130761864009432859" remote="130761867000000000" Dst="2" />
+<file name="jquery-ui.min.js" server="t7.ro/public_html/fis/" local="130761865358606190" remote="130761867000000000" Dst="2" />
+<file name="dataTables.tableTools.js" server="t7.ro/public_html/fis/" local="130761868718431592" remote="130761869400000000" Dst="2" />
 </dwsync>

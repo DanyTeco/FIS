@@ -36,4 +36,16 @@ CKEDITOR.replace( 'data', {
 	]
 } );
 
+CKEDITOR.replace( 'recipe', {
+	toolbar: [
+		[ 'Cut', 'Copy', 'Paste', 'PasteText', '-', 'Undo', 'Redo' ]
+	]
+} );
+
+CKEDITOR.replace( 'referral', {
+	toolbar: [
+		[ 'Cut', 'Copy', 'Paste', 'PasteText', '-', 'Undo', 'Redo' ]
+	]
+} );
+
 

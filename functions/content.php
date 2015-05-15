@@ -74,14 +74,14 @@ function new_recipes()
 	$dcod=$_POST['dcod'];
 	$diagnostic=$_POST['diagnostic'];
 	
-	if(!isset($_POST['content']) || strlen($_POST['content'])<2)
+	if(!isset($_POST['recipe']) || strlen($_POST['recipe'])<2)
 	{
 		set_msg('error', 'Completati lista de medicamente');
 		header('Location: '.$_SERVER['HTTP_REFERER']);
 		exit();	
 			
 	}
-	$content=$_POST['content'];
+	$content=$_POST['recipe'];
 	
 	$params=array();
 	$params[':cid']=$cid;
@@ -133,14 +133,14 @@ function new_referral()
 	$dcod=$_POST['dcod'];
 	$diagnostic=$_POST['diagnostic'];
 	
-	if(!isset($_POST['content']) || strlen($_POST['content'])<2)
+	if(!isset($_POST['referral']) || strlen($_POST['referral'])<2)
 	{
 		set_msg('error', 'Completati lista de medicamente');
 		header('Location: '.$_SERVER['HTTP_REFERER']);
 		exit();	
 			
 	}
-	$content=$_POST['content'];
+	$content=$_POST['referral'];
 	
 	$params=array();
 	$params[':cid']=$cid;
